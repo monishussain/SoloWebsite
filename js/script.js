@@ -136,3 +136,33 @@ $(function () {
         navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
     });
 });
+/*======================
+    Portfolio
+=====================*/
+$(function () {
+    showHideNavBar()
+    $(window).scroll(function () {
+        showHideNavBar()
+    });
+    function showHideNavBar(){
+        if($(window).scrollTop()>50){
+            $('nav').addClass('white-top-nav');
+            $('.navbar-brand img').attr('src','img/logo/logo-dark.png');
+        }else{
+            $('nav').removeClass('white-top-nav');
+            $('.navbar-brand img').attr('src','img/logo/logo.png');
+        }
+    }
+});
+
+/*======================
+    Mobile Navbar
+=====================*/
+$(function () {
+    $('#mobile-nav-open-btn').click(function () {
+        $("#mobile-nav").css("height","100%");
+    })
+    $("#mobile-nav-close-btn,.mobile-nav-content a").click(function () {
+        $("#mobile-nav").css("height","0%");
+    })
+})
