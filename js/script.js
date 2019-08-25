@@ -10,13 +10,13 @@ $(window).on('load', function () {
     Arrow-Down
 =====================*/
 $(function () {
-    $("#arrow-down").on('click', function(event) {
+    $("a.smooth-scroll").on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
             $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function(){
+                scrollTop: $(hash).offset().top - 64
+            }, 1000, function(){
                 window.location.hash = hash;
             });
         }
@@ -137,7 +137,7 @@ $(function () {
     });
 });
 /*======================
-    Portfolio
+    Navbar
 =====================*/
 $(function () {
     showHideNavBar()
@@ -148,9 +148,11 @@ $(function () {
         if($(window).scrollTop()>50){
             $('nav').addClass('white-top-nav');
             $('.navbar-brand img').attr('src','img/logo/logo-dark.png');
+            $('.btn-back-to-top').fadeIn()
         }else{
             $('nav').removeClass('white-top-nav');
             $('.navbar-brand img').attr('src','img/logo/logo.png');
+            $('.btn-back-to-top').fadeOut()
         }
     }
 });
@@ -165,4 +167,8 @@ $(function () {
     $("#mobile-nav-close-btn,.mobile-nav-content a").click(function () {
         $("#mobile-nav").css("height","0%");
     })
-})
+});
+
+/*======================
+    Mobile Navbar
+=====================*/

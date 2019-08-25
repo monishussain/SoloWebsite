@@ -170,7 +170,14 @@ section {
     background: #212226;
     border: 1px solid #212226;
 }
-
+.btn-back-to-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 4px;
+    padding: 3px 15px;
+    font-size: 20px;
+}
 /*======================================
                 Arrow Down
 ========================================*/

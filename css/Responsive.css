@@ -1,0 +1,27 @@
+/*======================================
+         Bootstrap 4 Media Queries
+========================================*/
+/*Media Query For Large Devices*/
+@media (min-width: 1200px) {
+
+}
+
+/*Media Query For Laptops and Small Desktops Devices*/
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+/*Media Query For small Laptops and Tabs Devices*/
+@media (min-width: 768px) and (max-width: 991px){
+
+}
+
+/*Media Query For small Tabs and small Devices*/
+@media (min-width: 576px) and (max-width: 767px){
+
+}
+
+/*Media Query For Small  Devices*/
+@media (max-width: 575px){
+
+}
